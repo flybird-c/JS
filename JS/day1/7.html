@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <script>
+        // 7.prompt中输入一句话将里面的空格全部去掉输出?
+       let str= prompt("输入")
+        let arrStr=[]
+        for (let i = 0; i < str.length; i++) {
+            if (str[i]!=" "){
+                arrStr.push(str[i])
+            }
+        }
+        document.writeln(arrStr)
+        document.writeln(arrStr.length)
+       //  let y="123  6"
+       //  y.splice(4,1)//字符串里没有splice方法
+       //  document.writeln(y)
+       //  document.writeln(y.length)
+        let str1= prompt("输入")
+        while (true){
+            str1=str1.replace(" ","")
+            if (str1.indexOf(" ")==-1){
+                break
+            }
+        }
+        document.writeln(str1)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

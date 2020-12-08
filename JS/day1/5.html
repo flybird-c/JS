@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <script>
+        // 5. 将下面数据设置到表格中
+        let goodsArray=[
+            {gid:1,gName:"蜗牛1s",gPrice:888,gNum:1,gImgSrc:"images/1.jpg"},
+            {gid:2,gName:"蜗牛2s",gPrice:1888,gNum:2,gImgSrc:"images/2.jpg"},
+            {gid:3,gName:"蜗牛3s",gPrice:2888,gNum:1,gImgSrc:"images/3.jpg"},
+            {gid:4,gName:"蜗牛4s",gPrice:3888,gNum:3,gImgSrc:"images/4.jpg"},
+            {gid:5,gName:"蜗牛5s",gPrice:4888,gNum:2,gImgSrc:"images/5.jpg"},
+            {gid:6,gName:"蜗牛6s",gPrice:5888,gNum:1,gImgSrc:"images/6.jpg"}
+        ];
+        let table=new table
+        window.onload=function (){
+            for (let i = 0; i < goodsArray.length; i++) {
+                let tr=table.insertRow(table.rows.length);
+                let obj=goodsArray[i];
+                for (let objKey in obj) {
+                    if(objKey=='gid'){
+                        break;
+                    }
+                    let td=tr.insertCell(tr.cells.length);
+                    td.innerText=obj[objKey]
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td >gid</td>
+        <td>gName</td>
+        <td>gPrice</td>
+        <td>gNum</td>
+        <td>gImgSrc</td>
+    </tr>
+</table>
+</body>
+</html>

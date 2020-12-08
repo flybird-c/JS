@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <script>
+        // 4.
+        // 1>.产生1000-9999  中50个随机数
+        // 2>.产生1000-9999  中50个不重复的随机数
+        let arr=[]
+        for (let i = 0; i < 50; i++) {
+            arr.push(parseInt(Math.random()*9000+1000))
+        }
+        document.writeln(arr)
+
+        let arr1=[]
+        for (let i = 0; i < 50; i++) {
+            let rand=parseInt(Math.random()*9000+1000)
+            if (arr1.indexOf(rand)==-1){
+                arr1.push(rand)
+            }
+
+        }
+        document.writeln(arr1)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

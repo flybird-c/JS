@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <script>
+        // 6.已知有字符串foo="get-element-by-id”,
+        // 写一个function将其转化成驼峰表示法”getElementById”
+        let foo="get-element-by-id"
+        foo= foo.split("-",4)
+        let fo=""
+        for (let i = 0; i < foo.length; i++) {
+            if (i==0){
+                fo+=foo[i].toString()
+            }else{
+                fo+=firstUp(foo[i].toString())
+            }
+        }
+        document.writeln(fo)
+function firstUp(str) {
+    let nStr=""
+    for (let i = 0; i < str.length; i++) {
+
+        if (i==0){
+            nStr+=str[0].toUpperCase()
+        }else {
+            nStr+=str[i]
+        }
+    }
+    return nStr
+}
+    </script>
+</head>
+<body>
+
+</body>
+</html>
